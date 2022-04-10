@@ -1,0 +1,16 @@
+﻿@using Registration.Models
+@model LoginModel    
+<div>
+        <form asp-action="Login">
+
+            <label asp-for="Mail"></label>
+            <input asp-for="Mail"/>
+            <span asp-validation-for="Mail"></span>
+            <br/>
+            <label asp-for="Password"></label>
+            <input asp-for="Password"/>
+            <span asp-validation-for="Password"></span>
+            <br/>
+            <input type="submit" value="Login"/>
+        </form>
+     </div>

@@ -1,0 +1,15 @@
+﻿@using Registration.Models
+@model IEnumerable<UserRegistrationModel> 
+@{
+    ViewData["Title"] = "Contact";
+}
+
+<h1>Users</h1>
+@foreach (UserRegistrationModel item in Model)
+{
+    <h2>@item.Name</h2>
+    <h3>@item.Email</h3>
+    <h4>@item.Age</h4> 
+}
+
+

@@ -1,0 +1,29 @@
+﻿    <div>
+        <form asp-action="Registration" asp-controller="RegistrationUser" method="post">
+            <label asp-for="Name"></label>
+            <input asp-for="Name"/>
+            <span asp-validation-for="Name"></span>
+            <br/>
+            <label asp-for="Email"></label>
+            <input asp-for="Email"/>
+            <span asp-validation-for="Email"></span>
+            <br/>
+            <label asp-for="Password"></label>
+            <input asp-for="Password"/>
+            <span asp-validation-for="Password"></span>
+            <br/>
+            <label asp-for="ConfirmPassword"></label>
+            <input asp-for="ConfirmPassword"/>
+            <span asp-validation-for="ConfirmPassword"></span>
+            <br/>
+            <label asp-for="Age"></label>
+            <input asp-for="Age"/>
+            <span asp-validation-for="Age"></span>
+            <br/>
+            <label asp-for="IsAgree"></label>
+            <input asp-for="IsAgree"/>
+            <span asp-validation-for="IsAgree"></span>
+            <br/>
+            <input type="submit" value="Создать учетную запись" class="btn-reg"/>
+        </form>
+     </div>
