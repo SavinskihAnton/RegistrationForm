@@ -58,18 +58,14 @@ namespace Registration.Controllers
                 UserRegistrationModel user = null;
                 using (DbUser db = new DbUser())
                 {
-                    user = db.UserInfo.FirstOrDefault(x => x.Email == users.Mail && x.Password == users.Password);
+                    user = db.UserInfo.FirstOrDefault(x => x.Email == users.Email && x.Password == users.Password);
                 }
                 if (user != null)
                 {
-                    return View("AcceptLogin", users);
-                }
-                else 
-                {
-                    return NotFound();
+                    return View("AcceptLogin", user);
                 }
             }
-            return View(users);
+            return View();
         }
     }
 }
